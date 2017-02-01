@@ -1,0 +1,68 @@
+body{
+    background-color: #333333;
+}
+#main{
+    margin-left:450px;
+    background-color: grey;
+}
+.email{
+    margin-left: 81px;
+}
+.pass{
+    margin-left: 58px;
+}
+#first{
+    margin-left: 48px;
+}
+#last{
+    margin-left: 50px;
+}
+h1{
+    font-size: 60px;
+    margin-left:50px;
+    margin-top: 80px;
+    color:white;
+}
+#main{
+    margin-left: 100px;
+    background-color: pink;
+    height:680px;
+    width:550px;
+    border: thin solid transparent;
+    margin: auto;
+}
+#wrapper{
+    background-color: #333333;
+    height:850px;
+    width:650px;
+    margin: auto;
+    border: thin solid transparent;
+}
+#login{
+    background-color: white;
+    height:200px;
+    width:400px;
+    margin:50px;
+    border: thin solid transparent;
+
+}
+#registration{
+    background-color: white;
+    margin-top: 10px;
+    height:300px;
+    width:400px;
+    margin:50px;
+    border: thin solid transparent;
+}
+h2{
+    margin-left: 10px;
+}
+form{
+    margin-left: 10px;
+}
+#username{
+    margin-left:55px;
+}
+input{
+    margin-top: 5px;
+}

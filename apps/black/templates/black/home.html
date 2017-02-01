@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'list/css/login.css' %}"media="screen" title="no title"  charset="utf-8">
+        <meta charset="utf-8">
+        <title>Home</title>
+    </head>
+    <body>
+        <a href="/logout">Logout</a>
+        <h1>Hello, {{request.session.user_name}}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <h2>Your Trip Schedule:</h2>
+        <table>
+            <tr>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+            <th>Plan</th>
+        </tr>
+        {% for trip in trip %}
+    <tr>
+        <td><a href="/view/{{trip.trip.id}}">{{trip.trip.destination}}</a></td>
+        <td>{{trip.trip.travelFrom}}</td>
+        <td>{{trip.trip.travelTo}}</td>
+        <td>{{trip.trip.description}}</td>
+    </tr>
+        {% endfor %}
+
+        </table>
+
+
+        <h2>Other User's Travel Plans</h2>
+        <table>
+            <tr>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+            <th>Do You Want to Join?</th>
+            </tr>
+            {% for otherTrip in otherTrip %}
+        <tr>
+            <td>{{otherTrip.trip.user.name}}</td>
+            <td><a href="/view/{{otherTrip.trip.id}}">{{otherTrip.trip.destination}}</a></td>
+            <td>{{otherTrip.trip.travelFrom}}</td>
+            <td>{{otherTrip.trip.travelTo}}</td>
+            <td><a href="/add/{{otherTrip.trip.id}}">Join</a></td>
+        </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/addTrip">Add Travel Plan</a>
+    </body>
+</html>

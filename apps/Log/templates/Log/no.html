@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'login/css/no.css' %}"media="screen" title="no title"  charset="utf-8">
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>WHOOPS!</h1>
+        <h2>Something went wrong. Please try again.</h2>
+        <form action="/goback" method="post">
+            <input type="submit" name="goBack" value="Go Back">
+
+        </form>
+    </body>
+</html>
